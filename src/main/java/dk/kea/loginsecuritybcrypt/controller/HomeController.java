@@ -44,7 +44,7 @@ public class HomeController {
             if(username.equals(uid) && BCrypt.checkpw(pwd, hpassword)) {
                 //login ok - gem credentials i cookie
                 session.setAttribute("uid", uid);
-
+                //snyder lidt og gemmer det eksisterende hashede password
                 session.setAttribute("pwd", hpassword);
             }else{
                 //login forkert - slet credentials fra cookie
